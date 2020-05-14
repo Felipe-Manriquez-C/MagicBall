@@ -1,55 +1,52 @@
 package com.example.magicball;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private ImageView ballI;
+    private TextView respuesta;
+
+    private String[] respuestaArray ={"Solo no puedes, con amigos sí", "Definitivamente es así", "Dile al coco que piense un poco", "Sí definitivamente", "Puede confiar en él",
+            "Como yo lo veo, sí", "Lo más probable", "Perspectiva buena", "Sí", "Las señales apuntan a sí", "Respuesta confusa intente de nuevo", "Pregunte de nuevo más tarde",
+            "Mejor no decirte ahora", "No puedo predecir ahora", "Levántate, suspira, sonríe, y sigue adelante", "No cuentes con eso", "¡Nunca te acostarás sin saber una cosa más!",
+            "Mi respuesta es no", "Mis fuentes dicen que no", "Outlook no es tan bueno", "Muy dudoso", "Deja que el mundo te sorprenda", "Eres suficiente tal y como eres",
+            "Si el plan no funciona, cambia el plan, pero no cambies la meta", "No sueñes tu vida, vive tu sueño"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        ballI = findViewById(R.id.boton);
+        respuesta = findViewById(R.id.respuesta);
+
+        ballI.setOnClickListener((View.OnClickListener) this);
+
+        Toast.makeText(MainActivity.this, "Buscando tu destino", Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    @Override
+        public void onClick(View v){
+
+            switch (v.getId()){
+                case R.id.boton:
+                    int ramdom = new Random().nextInt(respuestaArray.length);
+                    respuesta.setText(respuestaArray[ramdom]);
+
+                    break;
             }
-        });
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
         }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
