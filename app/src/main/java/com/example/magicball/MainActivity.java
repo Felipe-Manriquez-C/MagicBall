@@ -15,11 +15,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView ballI;
     private TextView respuesta;
 
-    private String[] respuestaArray ={"Solo no puedes, con amigos sí", "Definitivamente es así", "Dile al coco que piense un poco", "Sí definitivamente", "Puede confiar en él",
-            "Como yo lo veo, sí", "Lo más probable", "Perspectiva buena", "Sí", "Las señales apuntan a sí", "Respuesta confusa intente de nuevo", "Pregunte de nuevo más tarde",
-            "Mejor no decirte ahora", "No puedo predecir ahora", "Levántate, suspira, sonríe, y sigue adelante", "No cuentes con eso", "¡Nunca te acostarás sin saber una cosa más!",
-            "Mi respuesta es no", "Mis fuentes dicen que no", "Outlook no es tan bueno", "Muy dudoso", "Deja que el mundo te sorprenda", "Eres suficiente tal y como eres",
-            "Si el plan no funciona, cambia el plan, pero no cambies la meta", "No sueñes tu vida, vive tu sueño"};
+    private String[] respuestaArray ={"Solo no puedes, con amigos sí", "Dile al coco que piense un poco", "Puede confiar en él", "El error no importa, siempre y cuando sepas corregirlo",
+            "Cuanto más grande la dificultad, mayor la gloria", "Perspectiva buena", "Las señales apuntan a sí", "No son tus años de vida lo que cuenta, sino la vida en tus años",
+            "Mejor no decirte ahora", "No puedo predecir ahora", "Levántate, suspira, sonríe, y sigue adelante", "¡Nunca te acostarás sin saber una cosa más!", "Si te caes diez veces levántate once",
+            "Todo lo que puedas imaginar es real", "Deja que el mundo te sorprenda", "Eres suficiente tal y como eres", " Las cosas más simples pueden traer la mayor felicidad",
+            "Si el plan no funciona, cambia el plan, pero no cambies la meta", "No sueñes tu vida, vive tu sueño", "Tienes que esperar cosas de ti mismo antes de poder hacerlas",
+            "La preocupación nos debería llevar a la acción y no a la depresión", "Sólo una cosa vuelve un sueño imposible: el miedo a fracasar"};
 
 
     @Override
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ballI.setOnClickListener((View.OnClickListener) this);
 
-        Toast.makeText(MainActivity.this, "Buscando tu destino", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "Consejero", Toast.LENGTH_SHORT).show();
     }
 
 

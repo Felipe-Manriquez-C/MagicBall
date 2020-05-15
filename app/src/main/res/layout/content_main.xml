@@ -11,26 +11,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Conoce tu destino"
+        android:text="Consejero"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
         android:textSize="35sp"
         android:textColor="#00c853"
         android:textStyle="italic|bold" />
 
+
     <ImageView
         android:id="@+id/boton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="272dp"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        app:srcCompat="@drawable/ball" />
+        android:layout_marginTop="45dp"
+        app:srcCompat="@drawable/dragon" />
 
     <TextView
         android:id="@+id/respuesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="...."
+        android:text="..."
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:textSize="35sp"
